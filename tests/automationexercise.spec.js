@@ -5,14 +5,16 @@ test('has title', async ({ page }) => {
   await page.goto('https://automationexercise.com/');
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Automation Exercise/);
+  await expect(page).toHaveTitle(/Automation Exercises/);
 });
 
 test('Click on SignUp', async ({ page }) => {
+
   await page.goto('https://automationexercise.com/');
 
   // Click the get started link.
   //await page.getByRole('link', { name: 'Get started' }).click();
+  //await page.locator("xpath=//*[contains(text(),'Signup')]").click();
   await page.locator("xpath=//*[contains(text(),'Signup')]").click();
 
   // Expects page to have a heading with the name of Installation.
